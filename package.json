@@ -1,0 +1,24 @@
+{
+  "name": "gt-friendsfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mezran/GT-FriendsFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mezran/GT-FriendsFinder/issues"
+  },
+  "homepage": "https://github.com/Mezran/GT-FriendsFinder#readme",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
