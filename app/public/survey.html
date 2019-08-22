@@ -42,6 +42,126 @@
   <input type="radio" name="Q2" value="4">
   <span>OMG AMAZING</span>
 
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q3" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q3" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q3" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q3" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q4" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q4" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q4" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q4" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q5" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q5" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q5" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q5" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q6" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q6" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q6" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q6" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q7" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q7" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q7" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q7" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q8" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q8" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q8" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q8" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q9" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q9" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q9" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q9" value="4">
+  <span>OMG AMAZING</span>
+
+  <div class="">
+    How much do you like Pineapple?
+  </div>
+  <input type="radio" name="Q10" value="1">
+  <span>nope</span>
+  <br>
+  <input type="radio" name="Q10" value="2">
+  <span>it's alright</span>
+  <br>
+  <input type="radio" name="Q10" value="3">
+  <span>good</span>
+  <br>
+  <input type="radio" name="Q10" value="4">
+  <span>OMG AMAZING</span>
+
 
   <br>
   <input class="submit" type="submit" name="submit" value="submit">
@@ -55,18 +175,18 @@
       data: []
     };
 
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 10; i++) {
       let questions = document.getElementsByName("Q" + i);
-      console.log(questions);
-      console.log(questions.length);
+      // console.log(questions);
+      // console.log(questions.length);
       for (let j = 0; j < questions.length; j++) {
-        console.log("ran")
+        // console.log("ran")
         if (questions[j].checked === true) {
           dataToPOST.data.push(questions[j].value);
         } // end if
       } //end j forloop
     } //end i forloop
-    console.log("data")
+    console.log("data to send to server: ")
     console.log(dataToPOST);
 
     $.post("/api/friends", dataToPOST)

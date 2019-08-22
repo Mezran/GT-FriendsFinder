@@ -12,3 +12,5 @@ const friends = [{
   photo: "MISSING",
   scores: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 }]
+
+module.exports = friends;
