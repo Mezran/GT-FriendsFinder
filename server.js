@@ -2,16 +2,18 @@ const express = require ("express");
 const fs = require("fs");
 const path = require("path");
 
+
 const app = express();
 const PORT = 3000;
 
-// statuc routing for anything inside of public folder
+app.use(express.urlencoded({extended: true }));
+app.use(express.json());
 app.use(express.static('app/public'));
 
-// catch all for all paths not specified in app.public
-app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, './app/public/index.html'));
-});
+
+require("./app/routing/htmlRouting.js")(app);
+
+require('./app/routing/apiRouting.js')(app);
 
 
 app.listen(PORT, function(){
