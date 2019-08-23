@@ -26,9 +26,8 @@ module.exports = function(app) {
       for (let j = 0; j < 10; j++) {
         // console.log(Math.abs(userScore[j] - friends[i].scores[j]));
         score += Math.abs(userScore[j] - friends[i].scores[j]);
-
       }
-      compatableFriendsProfiles.push({friend:friends, differenceVal: score});
+      compatableFriendsProfiles.push({friend:friends[i], differenceVal: score});
     }
 
     // sorts array of friend profiles
@@ -38,8 +37,14 @@ module.exports = function(app) {
     })
     console.log(sortedFriendsProfiles);
 
+    let numberOfProfilesToSendToUser = 0;
+    if(sortedFriendsProfiles.length >= 10){
+      numberOfProfilesToSendToUser = 10;
+    } else {
+      numberOfProfilesToSendToUser = sortedFriendsProfiles.length;
+    }
 
     // return information and end requests.
-    res.json(req.body);
+    res.json(sortedFriendsProfiles.slice(0,numberOfProfilesToSendToUser));
   });
 };
